@@ -1,4 +1,18 @@
-const prefix = '.';
+const prefix = '.';lezkushCypherX/
+├── commands/
+│   ├── admin/
+│   │   └── ban.js
+│   ├── media/
+│   │   └── play.js
+│   ├── fun/
+│   │   └── ping.js
+│   └── ...
+├── index.js
+└── package.json
+
+
+
+
 
 client.on('message', message => {
     // Check kama message inaanza na prefix
@@ -18,11 +32,21 @@ client.on('message', message => {
     } else {
         message.reply(`Command .${command} haijafahamika!`);
     }
+
+
+
+
 });## Hi there 👋
 mkdir lezkushCypherX
 cd lezkushCypherX
 <!--
 **lezkush8/lezkush8** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+
+
+
+
+
+
 
 Here are some ideas to get you started:
 
@@ -60,6 +84,12 @@ client.on('qr', (qr) => {
     qrcode.generate(qr, { small: true });
 });
 
+
+
+
+
+
+
 client.on('ready', () => {
     console.log('Bot is ready!');
 });
@@ -70,6 +100,11 @@ client.on('message', message => {
     // Check if message starts with dot (.)
     if (message.body.startsWith(prefix)) {
         const args = message.body.slice(prefix.length).trim().split(/ +/);
+
+
+
+
+
         const command = args.shift().toLowerCase();
 
         // Example command: .ping
@@ -79,6 +114,10 @@ client.on('message', message => {
         // Add more commands here...
     }
 });
+
+
+
+
 
 client.initialize();
 
@@ -94,5 +133,4 @@ if (command === 'ban') {
     // Play music or video logic
     message.reply('Playing music...');
 }
-// Continue adding more commands
-
+// Continue adding more com
