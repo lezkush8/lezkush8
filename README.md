@@ -1,3 +1,35 @@
+lezkushCypherX/
+├── commands/
+│   ├── admin/
+│   │   ├── ban.js
+│   │   ├── unban.js
+│   │   └── warn.js
+│   ├── gtube/
+│   │   ├── play.js
+│   │   ├── movie.js
+│   │   └── download.js
+│   ├── fun/
+│   │   ├── sticker.js
+│   │   └── meme.js
+│   ├── utils/
+│   │   ├── test.js
+│   │   └── ping.js
+├── config/
+│   └── settings.js
+├── lib/
+│   ├── whatsapp.js
+│   ├── downloader.js
+│   └── utils.js
+├── handlers/
+│   ├── commandHandler.js
+│   └── eventHandler.js
+├── index.js
+├── package.json
+└── README.md
+
+
+
+
 kiconst prefix = '.';lezkushCypherX/
 ├── commands/
 │   ├── admin/
