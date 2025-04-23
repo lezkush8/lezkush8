@@ -1,4 +1,4 @@
-const prefix = '.';lezkushCypherX/
+kiconst prefix = '.';lezkushCypherX/
 ├── commands/
 │   ├── admin/
 │   │   └── ban.js
@@ -9,38 +9,6 @@ const prefix = '.';lezkushCypherX/
 │   └── ...
 ├── index.js
 └── package.json
-
-
-
-
-
-client.on('message', message => {
-    // Check kama message inaanza na prefix
-    if (!message.body.startsWith(prefix)) return;
-
-    const args = message.body.slice(prefix.length).trim().split(/ +/);
-    const command = args.shift().toLowerCase();
-
-    if (command === 'ping') {
-        message.reply('Pong!');
-    } else if (command === 'ban') {
-        // Logic ya ban
-        message.reply('User has been banned!');
-    } else if (command === 'play') {
-        // Play music or video logic
-        message.reply('Playing music...');
-    } else {
-        message.reply(`Command .${command} haijafahamika!`);
-    }
-
-
-
-
-});## Hi there 👋
-mkdir lezkushCypherX
-cd lezkushCypherX
-<!--
-**lezkush8/lezkush8** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
 
 
@@ -59,78 +27,63 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
-const prefix = '.';
+const prefix = '.'
 
 
 
-
-npm init -y
-npm install whatsapp-web.js
-
-
-touch index.js
-
-
-
+module.exports = {
+    name: 'ban',
+    description: 'Ban user from bot',
+    execute(message, args) {
+        message.reply('User has been banned!');
+    }
+};
 
 
+
+const fs = require('fs');
+const path = require('path');
 const { Client } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
 
 const client = new Client();
+const prefix = '.';
+client.commands = new Map();
 
-client.on('qr', (qr) => {
-    // Display QR code for WhatsApp login
+// Load all commands from folders
+const commandFolders = fs.readdirSync('./commands');
+for (const folder of commandFolders) {
+    const commandFiles = fs.readdirSync(`./commands/${folder}`).filter(file => file.endsWith('.js'));
+    for (const file of commandFiles) {
+        const command = require(`./commands/${folder}/${file}`);
+        client.commands.set(command.name, command);
+    }
+}
+
+client.on('qr', qr => {
     qrcode.generate(qr, { small: true });
 });
 
-
-
-
-
-
-
 client.on('ready', () => {
-    console.log('Bot is ready!');
+    console.log('lezkushCypherX is ready!');
 });
 
 client.on('message', message => {
-    const prefix = '.';
+    if (!message.body.startsWith(prefix)) return;
 
-    // Check if message starts with dot (.)
-    if (message.body.startsWith(prefix)) {
-        const args = message.body.slice(prefix.length).trim().split(/ +/);
+    const args = message.body.slice(prefix.length).trim().split(/ +/);
+    const commandName = args.shift().toLowerCase();
 
+    const command = client.commands.get(commandName);
+    if (!command) return;
 
-
-
-
-        const command = args.shift().toLowerCase();
-
-        // Example command: .ping
-        if (command === 'ping') {
-            message.reply('Pong!');
-        }
-        // Add more commands here...
+    try {
+        command.execute(message, args);
+    } catch (error) {
+        console.error(error);
+        message.reply('Kuna kosa limetokea!');
     }
 });
 
-
-
-
-
 client.initialize();
 
-
-node index.js
-
-.ping
-
-if (command === 'ban') {
-    // Logic ya ban command
-    message.reply('User has been banned!');
-} else if (command === 'play') {
-    // Play music or video logic
-    message.reply('Playing music...');
-}
-// Continue adding more com
