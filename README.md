@@ -16,3 +16,8 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 const prefix = '.';
+
+
+
+
+npm init -y
