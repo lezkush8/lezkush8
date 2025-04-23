@@ -1,4 +1,24 @@
-## Hi there 👋
+const prefix = '.';
+
+client.on('message', message => {
+    // Check kama message inaanza na prefix
+    if (!message.body.startsWith(prefix)) return;
+
+    const args = message.body.slice(prefix.length).trim().split(/ +/);
+    const command = args.shift().toLowerCase();
+
+    if (command === 'ping') {
+        message.reply('Pong!');
+    } else if (command === 'ban') {
+        // Logic ya ban
+        message.reply('User has been banned!');
+    } else if (command === 'play') {
+        // Play music or video logic
+        message.reply('Playing music...');
+    } else {
+        message.reply(`Command .${command} haijafahamika!`);
+    }
+});## Hi there 👋
 mkdir lezkushCypherX
 cd lezkushCypherX
 <!--
