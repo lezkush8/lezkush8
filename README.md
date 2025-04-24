@@ -56,6 +56,13 @@
 .mute [time]  
 .unmute  
 .group open  
+.antilink 
+.ban
+.track
+.remove 
+.vv
+.lezkush 
+
 .group close  
 .tagall  
 .warn [mention or reply]  
@@ -112,7 +119,6 @@
 .song [query or link]  
 .movie [movie name]  
 .lyrics [song name]  
-
 ### WHATSAPP COMMANDS  
 .block [mention or reply]  
 .unblock [mention or reply]  
@@ -125,3 +131,21 @@
 .revoke  
 .listadmins  
 .listonline
+.paradise
+.lezkush pushpa vee 
+.ban
+.unban
+.hack
+.hack stop
+.lezkush logo creator 
+.love
+.my love 
+.kiss
+.wife
+.my wife 
+.menu of love 
+.test love 
+
+  ⎸𝓛𝓮𝓪𝔃𝓴𝓾𝓼𝓱 𝓹𝓾𝓼𝓱𝓹𝓪 𝓿𝓮𝓮 
+  ᢺ⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⋋⋀⋙
+ 
