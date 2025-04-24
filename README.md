@@ -46,3 +46,82 @@
 - .broadcast [text] - Send message to all groups 
 
 
+
+### ADMIN 1 COMMANDS  
+.ban [mention or reply]  
+.unban [mention or reply]  
+.kick [mention or reply]  
+.promote [mention or reply]  
+.demote [mention or reply]  
+.mute [time]  
+.unmute  
+.group open  
+.group close  
+.tagall  
+.warn [mention or reply]  
+.resetwarn [mention or reply]  
+.groupban  
+.clear [amount or all]  
+
+### ADMIN 2 COMMANDS  
+.hack [mention or reply]  
+.fakehack [mention or reply]  
+.block [mention or reply]  
+.unblock [mention or reply]  
+.anti link on  
+.anti link off  
+.anti fake on  
+.anti fake off  
+.anti spam on  
+.anti spam off  
+.setprefix [symbol]  
+.welcome on  
+.welcome off  
+.goodbye on  
+.goodbye off  
+.setwelcome [text]  
+.setgoodbye [text]  
+.delete [reply]  
+.broadcast [text]  
+.autoreact on  
+.autoreact off  
+.autosticker on  
+.autosticker off  
+.getsession  
+.restartbot  
+.ping  
+
+### GENERAL COMMANDS  
+.help  
+.menu  
+.info  
+.owner  
+.ping  
+.rules  
+.botstatus  
+.report [text]  
+.speedtest  
+
+### MEDIA COMMANDS  
+.play [song name or YouTube link]  
+.video [video name or link]  
+.image [query]  
+.sticker [send or reply image/gif/video]  
+.gif [send or reply video]  
+.voice [text to speech]  
+.song [query or link]  
+.movie [movie name]  
+.lyrics [song name]  
+
+### WHATSAPP COMMANDS  
+.block [mention or reply]  
+.unblock [mention or reply]  
+.getpp [mention or reply]  
+.setpp [reply image]  
+.setname [text]  
+.setdesc [text]  
+.groupinfo  
+.invitelink  
+.revoke  
+.listadmins  
+.listonline
